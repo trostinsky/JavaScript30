@@ -70,8 +70,8 @@
           block.classList.remove("playing");
       }, 100);
   }
-  const audios = Array.from(document.querySelectorAll("audio"));
-  const keysBlocks = Array.from(document.querySelectorAll(".key"));
+  const audios = [...document.querySelectorAll("audio")];
+  const keysBlocks = [...document.querySelectorAll(".key")];
   window.addEventListener("keydown", (event) => {
     const {keyCode} = event;
     const finderWithKey = finder.bind(null, keyCode);
